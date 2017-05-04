@@ -1,5 +1,7 @@
 # Typing
 
+> 修改了tag和category的展示 by Lyz1052
+
 a pure and fresh Hexo theme.
 
 

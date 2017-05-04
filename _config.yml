@@ -1,14 +1,14 @@
 # Lang
-language: en
+language: zh-CN
 
 # Dark Mode
-dark: false
+dark: true
 
 # Header
 menu:
   Home: /
   Archives: /archives
-  About: /about
+  Categories: header_categories
 rss: /atom.xml
 
 # Content
@@ -25,16 +25,15 @@ fb_app_id:
 
 
 # Profile
-nickname: NickName
-description: Lorem ipsum dolor sit amet, **consectetur adipiscing elit.** Fusce eget urna vitae velit *eleifend interdum at ac nisi. In nec ligula lacus. Cum sociis natoque* penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed eu cursus erat, ut dapibus quam. Aliquam eleifend dolor vitae [libero pharetra](http://hexo.io) adipiscing. Etiam adipiscing dolor a quam tempor, eu convallis nulla varius. Aliquam sollicitudin risus a porta aliquam.
+nickname: zly
+description: 技不如人，甘拜下风
 links:
   Blog: /archives
-  GitHub: https://github.com/
-  Instagram: http://instagram.com/
-  Facebook: http://facebook.com/
-  Twitter : http://twitter.com/
+  GitHub: https://github.com/Lyz1052
 
 
 # Info
-archive_footer_content: Lorem ipsum dolor sit amet, **consectetur adipiscing elit.** Fusce eget urna vitae velit *eleifend interdum at ac nisi. In nec ligula lacus. Cum sociis natoque* penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed eu cursus erat, ut dapibus quam. Archive
-post_footer_content: ipsum dolor sit amet, **consectetur adipiscing elit.** Fusce eget urna vitae velit *eleifend interdum at ac nisi. In nec ligula lacus. Cum sociis natoque* penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed eu cursus erat, ut dapibus quam. Post
+footer_content: 
+  - "有时候输了比赛，总感觉队友不给力. *—— 徐志雷*"
+  - "做人最重要的是开心. *—— 朱东勇*"
+  - "The quick you let go of old cheese, the sooner you find new cheese. *—— Mice Haw*"

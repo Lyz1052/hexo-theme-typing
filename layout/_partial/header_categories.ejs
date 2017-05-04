@@ -1,0 +1,9 @@
+<% var html=""; %>
+
+<% site.categories.each(function(cate,i){%>
+	<% if(!cate.parent){ %>
+		<% html+="<a class='main-nav-link' target='_self' href='"+url_for(cate.path)+"' >"+cate.name+"</a>" %>
+	<% } %>
+<% }) %>
+
+<%- html%>

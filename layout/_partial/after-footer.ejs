@@ -22,7 +22,18 @@
 <% } %>
 
 <%- js('js/typing') %>
+<% if (theme.effect.enabled){ %>
+  <%- js('js/three85dev.js') %>
+  <%- js('js/OrbitControls.js') %>
+  <%- js('js/SkyShader.js') %>
+  <%- js('js/Detector.js') %>
+  <%- js('js/background.js') %>
+  <%- js('js/Bird.js') %>
+  <%- js('js/Boid.js') %>
+  <%- js('js/SkyShader.js') %>
+<% } %>
 <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
 <%- partial('baidu_tongji') %>
 <%- partial('google-analytics') %>
 <%- partial('gauges-analytics') %>
+

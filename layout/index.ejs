@@ -16,3 +16,26 @@
     </ul>
   </div>
 </div>
+
+<script>
+
+  var cfg={
+    'page':'index',
+    <% if (theme.effect.orbit_control){ %>
+      'orbit_control':true,
+    <% }else{ %>
+      'orbit_control':false,
+    <% } %>
+    <% if (theme.effect.bird){ %>
+      'bird':true,
+    <% }else{ %>
+        'bird':false,
+    <% } %>
+    <% if (theme.effect.sky){ %>
+      'sky':true,
+    <% }else{ %>
+      'sky':false
+    <% } %>
+  }
+  
+</script>

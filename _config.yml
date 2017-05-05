@@ -37,3 +37,10 @@ footer_content:
   - "有时候输了比赛，总感觉队友不给力. *—— 徐志雷*"
   - "做人最重要的是开心. *—— 朱东勇*"
   - "The quick you let go of old cheese, the sooner you find new cheese. *—— Mice Haw*"
+
+# THREEJS
+effect: 
+  enabled: true
+  orbit_control: true
+  bird: true
+  sky: true

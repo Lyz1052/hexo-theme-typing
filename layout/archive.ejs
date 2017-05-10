@@ -1,5 +1,13 @@
+<% if (theme.effect.archive) {%>
+  <div class="archive-container">
+  <%- partial('_partial/header_effect') %>
+  <hr/>
+  <%- partial('_partial/archive_effect', {pagination: config.archive, index: true}) %>
+  </div>
+<% } else { %>
 <div class="archive-container">
   <%- partial('_partial/header') %>
   <hr/>
   <%- partial('_partial/archive', {pagination: config.archive, index: true}) %>
 </div>
+<% } %>

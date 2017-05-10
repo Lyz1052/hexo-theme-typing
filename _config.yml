@@ -40,7 +40,12 @@ footer_content:
 
 # THREEJS
 effect: 
-  enabled: true
+  home: true
   orbit_control: true
   bird: true
   sky: true
+
+  archive: true
+  maxtag: 3
+  tweenable: true
+  default: "table"

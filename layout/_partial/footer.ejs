@@ -3,19 +3,32 @@
 
 
 <% if (is_home()) { %>
-  <footer id="footer" class="home-footer footer">
+  <% if (theme.effect.home) {%>
+    <footer id="footer" class="home-footer footer footer-transparent">
+  <%}else{%>
+    <footer id="footer" class="home-footer footer">
+  <%}%>
+  
     <div id="copyright" class="copyright">
       &copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %>  <%= __('powered_by') %> <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme &copy; <a href="https://github.com/geekplux" target="_blank">GeekPlux</a>
-<% } else if (is_archive()) { %>
-<footer id="footer" class="archive-footer footer">
+
+<% } else if (is_archive()||is_category()) { %>
+
+  <% if (theme.effect.archive) {%>
+    <footer id="footer" class="archive-footer footer archive-footer-fixed">
+  <%}else{%>
+    <footer id="footer" class="archive-footer footer">
+  <%}%>
+
   <hr/>
   <div id="footerContent" class="footer-content">
     <%- markdown(footer) %>
+
 <% } else {%>
     <footer id="footer" class="post-footer footer">
       <hr/>
       <div id="footerContent" class="footer-content">
         <%- markdown(footer) %>
 <% } %>
-      </div>
-    </footer>
+  </div>
+</footer>

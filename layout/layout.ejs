@@ -1,21 +1,32 @@
 <%- partial('_partial/head') %>
-  <% if (is_home()) { %>
-  <!--home页不使用dark样式-->
-    <body class="home-body">
-  <% } else {%>
-    <% if (theme.dark) { %>
-      <body class="dark">
-    <% } else { %>
-      <body>
-    <% } %>
-  <% } %>
-
-        <% if (is_home()) { %>
-          <div id="container" class="container-home">
-        <% } else {%>
-          <div id="container" class="container">
+      <% var bodyHtml = "<body class=\"" %>
+        <% if (theme.dark) {%>
+          <% bodyHtml+="dark " %>
         <% } %>
+        <% if (is_home()) {%>
+          <% bodyHtml+="home-body " %>
+        <% } %>
+        <% bodyHtml+="\">" %>
+      <%- bodyHtml %>
+
+      <%if (is_home()) { %>
+        <%if (theme.effect.home) { %>
+        <div id="container" class="container-absolute">
+        <% } else { %>
+        <div id="container" class="container">
+        <% } %>
+      <%} else if (is_archive()||is_category()) { %>
+        <%if (theme.effect.archive) { %>
+        <div id="container" class="container-absolute-top">
+        <% } else { %>
+        <div id="container" class="container">
+        <% } %>
+      <% } else { %>
+      <div id="container" class="container">
+      <% } %>
+
         <%- body %>
+          
         <%- partial('_partial/footer') %>
         <%- partial('_partial/after-footer') %>
       </div>

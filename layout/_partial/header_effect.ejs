@@ -1,0 +1,17 @@
+<header id="header" class="header header-fixed">
+  <nav id="main-nav" class="main-nav">
+    <% for (var i in theme.menu){ %>
+	  <% if (theme.menu[i]&&theme.menu[i].charAt(0)=='/') {%>
+		<a class="main-nav-link" href="<%- url_for(theme.menu[i]) %>"><%= __(i) %></a>
+	  <%}else if(theme.menu[i]){%>
+		<%- partial(theme.menu[i]+"", {name:i}) %>
+	  <%}%>
+    <% } %>
+  </nav>
+  
+  <nav id="sub-nav">
+    <% if (theme.rss){ %>
+      <a id="nav-rss-link" class="nav-icon" href="<%- theme.rss %>" title="<%= __('rss_feed') %>"></a>
+    <% } %>
+  </nav>
+</header>

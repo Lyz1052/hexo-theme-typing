@@ -1,0 +1,50 @@
+<script>
+var archive_data=[
+  <% page.posts.each(function(post, i){ %>
+    <% if (i>0){%>
+      ,
+    <%}%>
+    {'date':'<%= date(post.date, 'MMM D YYYY') %>',
+    'title':{
+      <% if (post.link){ %>
+        'url':'<%- url_for(post.link) %>',
+      <%}else{%>
+        'url':'<%- url_for(post.path) %>',
+      <%}%>
+      'name':'<%= post.title %>'
+    },
+    'tag': [
+    <% if (post.tags && post.tags.length){ %>
+      <% post.tags.each(function(tag, _i){ %>
+        <% if (_i>0){%>
+        ,
+        <%}%>
+        {
+          'url':'<%- url_for(tag.path) %>',
+          'name':'<%- tag.name %>'
+        }<% }) %>
+    <% } %>
+    ]}
+  <% }) %>
+];
+
+var archive = {
+  data:archive_data,
+  archive: <%- (theme.effect.archive) %>,
+  tweenable:<%- (theme.effect.tweenable) %>,
+  maxtag:<%- (theme.effect.maxtag) %>,
+  default: '<%- (theme.effect.default) %>'
+};
+
+</script>
+<% if (page.total > 1){ %>
+  <nav id="page-nav" class="page-nav page-nav-fixed">
+    <% var prev_text = "&laquo; " + __('prev');var next_text = __('next') + " &raquo;"%>
+    <%- paginator({
+      prev_text: prev_text,
+      next_text: next_text
+    }) %>
+  </nav>
+<% } %>
+
+

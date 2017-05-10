@@ -22,16 +22,32 @@
 <% } %>
 
 <%- js('js/typing') %>
-<% if (theme.effect.enabled){ %>
-  <%- js('js/three85dev.js') %>
-  <%- js('js/OrbitControls.js') %>
-  <%- js('js/SkyShader.js') %>
-  <%- js('js/Detector.js') %>
-  <%- js('js/background.js') %>
-  <%- js('js/Bird.js') %>
-  <%- js('js/Boid.js') %>
-  <%- js('js/SkyShader.js') %>
+
+<% if (is_home()) { %>
+  <% if (theme.effect.home){ %>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/three.js/85/three.min.js"></script>
+    <%- js('js/OrbitControls.js') %>
+    <%- js('js/SkyShader.js') %>
+    <%- js('js/Detector.js') %>
+    <%- js('js/Bird.js') %>
+    <%- js('js/Boid.js') %>
+    <%- js('js/SkyShader.js') %>
+    <%- js('js/homeffect.js') %>
+  <% } %>
 <% } %>
+
+<% if (is_archive()||is_category()) { %>
+  <% if (theme.effect.archive){ %>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/three.js/85/three.min.js"></script>
+    <%- js('js/OrbitControls.js') %>
+    <%- js('js/TrackballControls.js') %>
+    <%- js('js/CSS3DRenderer.js') %>
+    <%- js('js/archiveffect.js') %>
+    <%- js('js/tween.min.js') %>
+  <% } %>
+<% } %>
+
+
 <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
 <%- partial('baidu_tongji') %>
 <%- partial('google-analytics') %>

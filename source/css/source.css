@@ -9,6 +9,9 @@ $grey: #aeb4b9;
 $grey-bold: #777;
 $grey-light: #cacdd0;
 $scooter: #22C5E5;
+$seele-red: #FF5046;
+$seele-element: #231B33;
+$seele-bottom: #E8DFFE;
 $content-width: 60%;
 
 
@@ -499,57 +502,9 @@ em {
 
 
 
-
-
-/************  dark mode  ***********/
-$dark-bg: #3f3f3f;
-$dark-code-bg: #333;
-$dark-code-marked-bg: #444;
-$dark-color: #d8d8d8;
-$dark-grey: #aaa;
-$dark-grey-bold: #bbb;
-$dark-white: #ddd;
-$dark-white-light: #fff;
-
-.dark {
-  background-color: $dark-bg;
-  color: $dark-color;
-
-
-  .container,
-  .footer {
-    background-color: $dark-bg;
-  }
-
-  .footer-transparent {
-    background-color: transparent;
-  }
-
-  a {
-    color: $dark-white;
-  }
-  a:hover {
-    /*@extend a-hover;*/
-    color: $dark-white-light;
-  }
-
-  .home {
-    color: $dark-color;
-    h1,
-    strong {
-      color: $dark-white;
-    }
-    a {
-      border-bottom: solid 1px #ddd;
-    }
-    a:hover {
-      /*border-bottom: solid 1px $dark-white-light;*/
-    }
-  }
-
-  /* effect */
+ /* effect */
   .archive-effect{
-            .element {
+        .element {
             display: flex;
             flex-direction: column;
             justify-content: space-around;
@@ -603,6 +558,117 @@ $dark-white-light: #fff;
             
             font-size: 80%;
             font-weight: 200;
+            /*border: solid;
+            border-radius: 5px;
+            border-width: 1px;
+            border-bottom-color: #777;
+            border-right-color: #777;
+            border-top-color: #cacdd0;
+            border-left-color: #cacdd0;*/
+        }
+  }
+
+/************  eva mode  ***********/
+$seele-bg: #fff;
+$seele-font: rgb(238,26,38);
+$seele-element: rgb(48,48,40);
+
+$seele-code-bg: #333;
+$seele-code-marked-bg: #444;
+$seele-color: #d8d8d8;
+$seele-grey: #aaa;
+$seele-grey-bold: #bbb;
+$seele-white: #ddd;
+$seele-white-light: #fff;
+.seele {
+   /* effect */
+   
+  .archive-effect{
+        .element {
+            background-color: $seele-element;
+            color: $seele-font;
+            /*box-shadow: 0px 0px 12px #222;*/
+        }
+
+        .title:hover{
+            text-shadow: 0 0 10px rgba(127,255,255,0.95);
+        }
+
+
+        .tag{
+            /*border: solid;
+            border-radius: 5px;
+            border-width: 1px;
+            border-bottom-color: #777;
+            border-right-color: #777;
+            border-top-color: #cacdd0;
+            border-left-color: #cacdd0;*/
+        }
+  }
+}
+
+/************  dark mode  ***********/
+$dark-bg: #3f3f3f;
+$dark-code-bg: #333;
+$dark-code-marked-bg: #444;
+$dark-color: #d8d8d8;
+$dark-grey: #aaa;
+$dark-grey-bold: #bbb;
+$dark-white: #ddd;
+$dark-white-light: #fff;
+
+.dark {
+  background-color: $dark-bg;
+  color: $dark-color;
+
+
+  .container,
+  .footer {
+    background-color: $dark-bg;
+  }
+
+  .footer-transparent {
+    background-color: transparent;
+  }
+
+  a {
+    color: $dark-white;
+  }
+  a:hover {
+    /*@extend a-hover;*/
+    color: $dark-white-light;
+  }
+
+  .home {
+    color: $dark-color;
+    h1,
+    strong {
+      color: $dark-white;
+    }
+    a {
+      border-bottom: solid 1px #ddd;
+    }
+    a:hover {
+      /*border-bottom: solid 1px $dark-white-light;*/
+    }
+  }
+
+  .archive-effect{
+        .element {
+            background-color: rgba(63,63,63.0.1);
+            color: #fff;
+            /*border: 1px solid #45ada8;*/
+            box-shadow: 0px 0px 12px #222;
+            /*text-align: center;*/
+        }
+
+
+        .title:hover{
+            text-shadow: 0 0 10px rgba(127,255,255,0.95);
+        }
+
+
+        .tag{
             /*border: solid;
             border-radius: 5px;
             border-width: 1px;

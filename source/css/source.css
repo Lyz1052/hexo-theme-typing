@@ -512,13 +512,11 @@ em {
             flex-wrap: wrap;
             width: 350px;
             height: 100px;
-            background-color: rgba(63,63,63.0.1);
-            color: #fff;
             padding:10px;
 
             /*box-shadow: 0px 0px 12px #9de0ad;*/
             /*border: 1px solid #45ada8;*/
-            box-shadow: 0px 0px 12px #222;
+            /*box-shadow: 0px 0px 12px #222;*/
             /*text-align: center;*/
         }
 
@@ -534,15 +532,16 @@ em {
         }
 
         .title {
+            font-weight:700;
+            font-size:17px;
             text-align: center;
             width: 285px;
-            
             margin-top:5px;
             overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
         }
 
         .title:hover{
-            text-shadow: 0 0 10px rgba(127,255,255,0.95);
+            /*text-shadow: 0 0 10px rgba(127,255,255,0.95);*/
         }
 
         .tags {
@@ -568,34 +567,49 @@ em {
         }
   }
 
-/************  eva mode  ***********/
-$seele-bg: #fff;
-$seele-font: rgb(238,26,38);
-$seele-element: rgb(48,48,40);
+/************  effect mode  ***********/
+$three-bg: #fff;
+$three-font: rgb(51,51,51);
+$three-element: rgb(253,253,192);
 
-$seele-code-bg: #333;
-$seele-code-marked-bg: #444;
-$seele-color: #d8d8d8;
-$seele-grey: #aaa;
-$seele-grey-bold: #bbb;
-$seele-white: #ddd;
-$seele-white-light: #fff;
-.seele {
+$three-code-bg: #333;
+$three-code-marked-bg: #444;
+$three-color: #d8d8d8;
+$three-grey: #aaa;
+$three-grey-bold: #bbb;
+$three-white: #ddd;
+$three-white-light: #fff;
+.three {
    /* effect */
-   
+   background-color: $three-bg;
+   color:$three-font;
+
   .archive-effect{
         .element {
-            background-color: $seele-element;
-            color: $seele-font;
-            /*box-shadow: 0px 0px 12px #222;*/
+            background-color: $three-element;
+            color: $three-font;
+            box-shadow: 3px 3px 7px 0px #5f5f5f;
+        }
+
+        .date{
+          color:grey;
+        }
+
+        .title{
+          color:rgb(50,50,70);
+        }
+
+        .tag:hover{
+          opacity: 1;
         }
 
         .title:hover{
-            text-shadow: 0 0 10px rgba(127,255,255,0.95);
+            color:rgb(205,133,63);
+            /*text-shadow: 0 0 10px rgba(127,255,255,0.95);*/
         }
 
-
         .tag{
+            color:grey;
             /*border: solid;
             border-radius: 5px;
             border-width: 1px;
@@ -665,17 +679,6 @@ $dark-white-light: #fff;
 
         .title:hover{
             text-shadow: 0 0 10px rgba(127,255,255,0.95);
-        }
-
-
-        .tag{
-            /*border: solid;
-            border-radius: 5px;
-            border-width: 1px;
-            border-bottom-color: #777;
-            border-right-color: #777;
-            border-top-color: #cacdd0;
-            border-left-color: #cacdd0;*/
         }
   }
 

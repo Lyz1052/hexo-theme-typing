@@ -1,8 +1,9 @@
 <%- partial('_partial/head') %>
       <% var bodyHtml = "<body class=\"" %>
-        <% if (theme.dark) {%>
-          <% bodyHtml+="dark " %>
+        <% if (theme.mode) {%>
+          <% bodyHtml += theme.mode %>
         <% } %>
+
         <% if (is_home()) {%>
           <% bodyHtml+="home-body " %>
         <% } %>

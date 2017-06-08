@@ -99,15 +99,15 @@ function init() {
 
         //object
         var object = new THREE.CSS3DObject(element[0]);
-        object.position.x = Math.random() * 400 - 400;
-        object.position.y = Math.random() * 400 - 400;
-        object.position.z = Math.random() * 400 + 0;
+        object.position.x = 0;
+        object.position.y = 0;
+        object.position.z = -50000;
         scene.add(object);
         objects.push(object);
 
         //table
         var target = new THREE.Object3D();
-        target.position.x = -200 + 400 * (i % 2);
+        target.position.x = -250 + 450 * (i % 2);
         target.position.y = 300 - 140 * Math.floor(i / 2);
         target.position.z = -400;
         targets.push(targets.table, target);
@@ -141,7 +141,7 @@ function init() {
     // controls.maxDistance = 6000;
     // controls.addEventListener('change', render);
 
-    transform(targets[archive.default], 2000);
+    transform(targets[archive.default], 1000);
 
     if (archive.tweenable)
         $('body').on('keypress', function (e) {
@@ -157,14 +157,14 @@ function init() {
             switch (e.keyCode) {
                 case 52:
                     moveIfNotList(-1);
-                    transform(targets.index, 2000);
+                    transform(targets.index, 1000);
                     break;
                 case 53:
                     cameraResetter.reset();
                     break;
                 case 54:
                     moveIfNotList(1);
-                    transform(targets.index, 2000);
+                    transform(targets.index, 1000);
                     break;
             }
         })

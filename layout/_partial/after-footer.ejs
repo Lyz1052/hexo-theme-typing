@@ -24,7 +24,7 @@
 <%- js('js/typing') %>
 
 <% if (is_home()) { %>
-  <% if (theme.effect.home){ %>
+  <% if (theme.mode=='three'&&theme.effect.home){ %>
     <!--<script src = "https://cdnjs.cloudflare.com/ajax/libs/three.js/85/three.min.js"></script>-->
     <script src = "https://cdn.bootcss.com/three.js/r83/three.js"></script>
     <%- js('js/OrbitControls.js') %>
@@ -37,8 +37,8 @@
   <% } %>
 <% } %>
 
-<% if (is_archive()||is_category()) { %>
-  <% if (theme.effect.archive){ %>
+<% if (is_archive()||is_category()||is_tag()) { %>
+  <% if (theme.mode=='three'&&theme.effect.archive){ %>
     <script src = "https://cdn.bootcss.com/three.js/r83/three.js"></script>
     <!--<script src = "https://cdnjs.cloudflare.com/ajax/libs/three.js/85/three.min.js"></script>-->
     <%- js('js/OrbitControls.js') %>

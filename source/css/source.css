@@ -532,7 +532,7 @@ em {
         }
 
         .title {
-            font-weight:700;
+            font-family: Verdana;Times New Roman;Courier New;Sans-serif;
             font-size:17px;
             text-align: center;
             width: 285px;

@@ -116,7 +116,7 @@ function init() {
         var rw = 1
             , rl = Math.floor(len / rw)
             , ra = Math.floor(i / rw) % rl * Math.PI * 2 / rl
-            , rr = camera.position.z
+            , rr = camera.position.z+10//防止遮挡
             , rz = 0;
         // console.log(ra)
         target = new THREE.Object3D();

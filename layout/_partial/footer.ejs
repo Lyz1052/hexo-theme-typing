@@ -12,7 +12,7 @@
     <div id="copyright" class="copyright">
       &copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %>  <%= __('powered_by') %> <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme &copy; <a href="https://github.com/geekplux" target="_blank">GeekPlux</a>
 
-<% } else if (is_archive()||is_category()) { %>
+<% } else if (is_archive()||is_category()||is_tag()) { %>
 
   <% if (theme.effect.archive) {%>
     <footer id="footer" class="archive-footer footer archive-footer-fixed">

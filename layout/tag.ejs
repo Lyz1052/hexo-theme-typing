@@ -1,5 +1,9 @@
 <div class="category-container">
   <%- partial('_partial/header') %>
   <hr/>
-  <%- partial('_partial/archive', {pagination: config.tag, index: true}) %>
+  <% if(theme.mode=='three') {%>
+    <%- partial('_partial/archive_effect', {pagination: config.tag, index: true}) %>
+  <%}else{%>
+    <%- partial('_partial/archive_post', {pagination: config.tag, index: true}) %>
+  <%}%>
 </div>

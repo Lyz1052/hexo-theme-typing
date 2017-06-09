@@ -52,7 +52,7 @@ body, h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-  font-size: 20px;
+  font-size: 15px;
 }
 
 
@@ -532,7 +532,7 @@ em {
         }
 
         .title {
-            font-family: Verdana;Times New Roman;Courier New;Sans-serif;
+            font-family: Verdana,Times New Roman,Courier,New Sans-serif;
             font-size:17px;
             text-align: center;
             width: 285px;
@@ -568,7 +568,7 @@ em {
   }
 
 /************  effect mode  ***********/
-$three-bg: #fff;
+$three-bg: #f9f9f9;
 $three-font: rgb(51,51,51);
 $three-element: rgb(253,253,192);
 
@@ -583,7 +583,9 @@ $three-white-light: #fff;
    /* effect */
    background-color: $three-bg;
    color:$three-font;
-
+   .container{
+      background-color: $three-bg;
+   }
   .archive-effect{
         .element {
             background-color: $three-element;
@@ -766,7 +768,7 @@ $code-font-size: 14px;
 $code-line-height: 1.8;
 
 
-$highlight-background: #ffffff;
+$highlight-background: #fffffa;
 $highlight-current-line: #efefef;
 $highlight-selection: #e6e6e6;
 $highlight-foreground: #4d4d4c;
@@ -835,7 +837,7 @@ $highlight-purple: #8959a8;
       width: 0;
     }
     .line {
-      height: 25px;
+      height: 20px;
     }
     .line.marked {
       background: $highlight-selection;

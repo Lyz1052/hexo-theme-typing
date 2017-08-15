@@ -48,7 +48,7 @@ var start = [5, 1];
 var box = [
     [3, 2],
     [5, 2],
-    [2, 5]
+    [2, 4]
 ];
 
 var target = [
